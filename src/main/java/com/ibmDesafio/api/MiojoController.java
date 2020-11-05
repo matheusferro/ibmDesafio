@@ -20,7 +20,7 @@ public class MiojoController {
     public ResponseEntity<?> miojo(@Valid @RequestBody MiojoTempoModel tempo){
         Map<String, Object> response = new HashMap<>();
         CalculaTempoService service = new CalculaTempoService();
-        response.put("resultado", service.calculaTempo(tempo));
+        response.put("tempoMinimo", service.calculaTempo(tempo));
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 

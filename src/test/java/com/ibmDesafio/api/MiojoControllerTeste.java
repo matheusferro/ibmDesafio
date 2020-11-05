@@ -32,7 +32,7 @@ public class MiojoControllerTeste {
         this.mockMvc.perform(post(URL).contentType(MediaType.APPLICATION_JSON_VALUE)
                 .content(new ObjectMapper().writeValueAsString(mapToCreate)))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.resultado").value("10"));
+                .andExpect(jsonPath("$.tempoMinimo").value("10"));
     }
 
     @Test
@@ -46,7 +46,7 @@ public class MiojoControllerTeste {
 
         this.mockMvc.perform(post(URL).contentType(MediaType.APPLICATION_JSON_VALUE)
                 .content(new ObjectMapper().writeValueAsString(mapToCreate))).andExpect(status().isOk())
-                .andExpect(jsonPath("$.resultado").value("9"));
+                .andExpect(jsonPath("$.tempoMinimo").value("9"));
     }
 
     @Test
@@ -60,7 +60,7 @@ public class MiojoControllerTeste {
 
         this.mockMvc.perform(post(URL).contentType(MediaType.APPLICATION_JSON_VALUE)
                 .content(new ObjectMapper().writeValueAsString(mapToCreate))).andExpect(status().isOk())
-                .andExpect(jsonPath("$.resultado").value("15"));
+                .andExpect(jsonPath("$.tempoMinimo").value("15"));
     }
 
     @Test
@@ -74,7 +74,7 @@ public class MiojoControllerTeste {
 
         this.mockMvc.perform(post(URL).contentType(MediaType.APPLICATION_JSON_VALUE)
                 .content(new ObjectMapper().writeValueAsString(mapToCreate))).andExpect(status().isOk())
-                .andExpect(jsonPath("$.resultado").value("44"));
+                .andExpect(jsonPath("$.tempoMinimo").value("44"));
     }
 
     @Test
